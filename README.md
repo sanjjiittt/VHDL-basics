@@ -1,2 +1,2 @@
 # VHDL-basics
-VHDL basics programs
+VHDL basic programs
