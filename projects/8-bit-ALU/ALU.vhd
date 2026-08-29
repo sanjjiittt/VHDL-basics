@@ -81,4 +81,5 @@ overflow <= overflow_s;
 signFlag <= '1' when finalOUTPUT(7) = '1' else '0';
 zeroFlag <= '1' when unsigned(finalOUTPUT)= 0  else '0';
 Y <= finalOUTPUT;
+
 end structural;
