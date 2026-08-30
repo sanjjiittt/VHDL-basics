@@ -4,7 +4,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity JK_FF is
     Port ( J : in STD_LOGIC;
            K : in STD_LOGIC;
-           clk : in STD_LOGIC;
+           clk, rst : in STD_LOGIC;
            Q : out STD_LOGIC;
            Q_bar : out STD_LOGIC);
 end JK_FF;
@@ -14,7 +14,9 @@ begin
     process(clk)
         variable temp: std_logic;
     begin
-        if rising_edge(clk) then
+        if rst = '1' then
+            temp:= '0';
+        elsif rising_edge(clk) then
             if J /= K then 
                 temp:= J;
             elsif J = '1' and K = '1' then
