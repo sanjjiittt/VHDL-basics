@@ -11,7 +11,7 @@ end JK_FF;
 
 architecture behavioural of JK_FF is
 begin
-    process(clk)
+    process(clk, rst)
         variable temp: std_logic;
     begin
         if rst = '1' then
